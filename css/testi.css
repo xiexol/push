@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eeeeea;
+}
+
+.wrapper {
+  width: 100%;
+  height: 70vh;
+margin-top: 30px;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 500px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+.card > .row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 400px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+  margin-left: 10px;
+  margin-top: 7px;
+
+}
+
+.description p {
+  color: #f5f5f5ec;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+
+.description h4 {
+  text-transform: uppercase;
+  color: #fceb00ec;
+  font-size: 14px;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url('../ahyar.jpeg');
+}
+.card[for="c2"] {
+  background-image: url('../nepal.jpeg');
+}
+.card[for="c3"] {
+  background-image: url('../zapin.jpeg');
+}
+.card[for="c4"] {
+  background-image: url('../yasue.jpeg');
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Warna latar belakang gelap */
+  color: #e0e0e0; /* Warna teks terang */
+}
+
+header {
+  background: linear-gradient(90deg, #161616, #b30000); /* Gradien gelap */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+header h1 {
+  font-family:"Anton";
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+}
+header h1 span{
+  font-family:"Anton";
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+}
+header h1 a{
+  font-family:"Anton";
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Warna saat hover */
+}
+
+main {
+  padding: 0px;
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  background: #1e1e1e; /* Latar belakang formulir gelap */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444; /* Border lebih gelap */
+  border-radius: 4px;
+  background: #333; /* Latar belakang input gelap */
+  color: #fff; /* Teks input terang */
+  transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  border-color: #4a90e2; /* Warna border saat fokus */
+}
+
+button {
+  background: #880000; /* Warna tombol */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #5e0000; /* Warna tombol saat hover */
+}
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: #1e1e1e; /* Latar belakang footer gelap */
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.workout {
+  background: #1e1e1e; /* Latar belakang latihan gelap */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.workout img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.progress-entry {
+  background: #333; /* Latar belakang entri kemajuan */
+  border-left: 5px solid #880000; /* Garis samping */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+/* Media Queries */
+.hamburger {
+  display: none; /* Sembunyikan hamburger menu secara default */
+  font-size: 2em;
+  cursor: pointer;
+  color: #fff;
+}
+
+nav {
+  display: block; /* Tampilkan navbar secara default */
+}
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 {
+  margin-left: 1em;
+}
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Sembunyikan hamburger secara default */
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Navbar Styles */
+nav {
+  display: block; /* Tampilkan navbar secara default */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.workout {
+  margin-top: 20px; /* Jarak atas untuk workout */
+  font-size: 1.2em;
+}
+
+.workout h3 {
+  margin-bottom: 0.4cm; /* Jarak antara judul dan gerakan */
+}
+
+.exercise {
+  margin-bottom: 0.5cm; /* Jarak antar gerakan */
+ 
+  border: 1px solid #e0e0e0; /* Border halus (opsional) */
+  border-radius: 5px; /* Sudut yang membulat (opsional) */
+  background-color: #f9f9f9; /* Warna latar belakang (opsional) */
+
+}
+.exercise img {
+  display: block; /* Memastikan gambar berada di baris terpisah */
+  margin-bottom: 5px; /* Jarak antara gambar dan teks */
+}
+
+.exercise p {
+  margin: 0; /* Menghilangkan margin default pada paragraf */
+  padding-left: 5px; /* Menambahkan padding kiri untuk teks */
+}
+#bmi-result {
+  margin-top: 20px; /* Jarak atas untuk hasil BMI */
+  font-size: 1.2em; /* Ukuran font hasil */
+  display: none ; /* Sembunyikan hasil sampai dihitung */
+}
+/* Media Queries */
+@media (max-width: 758px) {
+  .hamburger {
+      display: block; /* Tampilkan hamburger pada tampilan kecil */
+  }
+
+  nav {
+      display: none; /* Sembunyikan navbar pada tampilan kecil */
+      background: #121212; /* Latar belakang navbar */
+      position: absolute;
+      top: 60px; /* Sesuaikan dengan tinggi header */
+      width: 100%;
+      z-index: 1000;
+  }
+
+  nav.active {
+      display: block; /* Tampilkan navbar saat aktif */
+  }
+
+  nav ul {
+      flex-direction: column; /* Ubah arah menjadi kolom */
+      padding: 0;
+  }
+
+  nav ul li {
+      margin: 10px 0; /* Tambahkan margin untuk item menu */
+  }
+
+  .hero-content h1 {
+      font-size: 2.5rem; /* Ukuran font untuk tampilan kecil */
+  }
+
+  .hero-content p {
+      font-size: 1.2rem; /* Ukuran font untuk tampilan kecil */
+  }
+  input:checked + label {
+    width: 250px;
+  }
+  .card {
+    width: 15px;
+  }
+  .card > .row > .description {
+
+    width: 200px;
+   
+  
+  }
+  .card[for="c1"] {
+    background-image: url('../ahyar1.jpeg');
+  }
+  .card[for="c2"] {
+    background-image: url('../nepal.jpeg');
+  }
+  .card[for="c3"] {
+    background-image: url('../zapin.jpeg');
+  }
+  .card[for="c4"] {
+    background-image: url('../yasue1.jpeg');
+  }
+  
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

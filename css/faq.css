@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Warna latar belakang gelap */
+    color: #e0e0e0; /* Warna teks terang */
+}
+
+header {
+    background: linear-gradient(90deg, #161616, #b30000); /* Gradien gelap */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+header h1 {
+    font-family:"Anton";
+    font-weight: 400;
+    font-size: 20px;
+    font-style: italic;
+}
+header h1 span{
+    font-family:"Anton";
+    font-weight: 400;
+    font-size: 20px;
+    font-style: italic;
+}
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../hero-bg.jpg'); /* Ganti dengan gambar latar belakang yang sesuai */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 20%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 130px;
+}
+
+.hero .content h1 {
+    
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+    
+}
+
+.hero .content h1 span {
+    color:gold; /* Pastikan variabel ini didefinisikan di CSS Anda */
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    mix-blend-mode: difference;
+}
+
+.hero .content p a {
+    color: #fff;
+}
+
+.hero .content p a:hover {
+    color: var(--primary);
+    transition: 0.5s;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Warna saat hover */
+}
+
+main {
+    padding: 0px;
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    background: #1e1e1e; /* Latar belakang formulir gelap */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444; /* Border lebih gelap */
+    border-radius: 4px;
+    background: #333; /* Latar belakang input gelap */
+    color: #fff; /* Teks input terang */
+    transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #4a90e2; /* Warna border saat fokus */
+}
+
+button {
+    background: #880000; /* Warna tombol */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5e0000; /* Warna tombol saat hover */
+}
+#timer {
+    background: #1e1e1e; /* Latar belakang gelap */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#timer-display {
+    font-size: 2em;
+    color: #f0f0f0; /* Warna teks terang */
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #880000; /* Warna tombol */
+    color: #fff;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5e0000; /* Warna tombol saat hover */
+}
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #1e1e1e; /* Latar belakang footer gelap */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.workout {
+    background: #1e1e1e; /* Latar belakang latihan gelap */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.workout img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.progress-entry {
+    background: #333; /* Latar belakang entri kemajuan */
+    border-left: 5px solid #880000; /* Garis samping */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+/* Media Queries */
+.hamburger {
+    display: none; /* Sembunyikan hamburger menu secara default */
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+}
+
+nav {
+    display: block; /* Tampilkan navbar secara default */
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2 {
+    margin-left: 1em;
+    margin-top: 20px;
+}
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Sembunyikan hamburger secara default */
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Navbar Styles */
+nav {
+    display: block; /* Tampilkan navbar secara default */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.workout {
+    margin-top: 20px; /* Jarak atas untuk workout */
+    font-size: 1.2em;
+}
+
+.workout h3 {
+    margin-bottom: 0.4cm; /* Jarak antara judul dan gerakan */
+}
+
+.exercise {
+    margin-bottom: 0.5cm; /* Jarak antar gerakan */
+   
+    border: 1px solid #e0e0e0; /* Border halus (opsional) */
+    border-radius: 5px; /* Sudut yang membulat (opsional) */
+    background-color: #f9f9f9; /* Warna latar belakang (opsional) */
+
+}
+.exercise img {
+    display: block; /* Memastikan gambar berada di baris terpisah */
+    margin-bottom: 5px; /* Jarak antara gambar dan teks */
+}
+
+.exercise p {
+    margin: 0; /* Menghilangkan margin default pada paragraf */
+    padding-left: 5px; /* Menambahkan padding kiri untuk teks */
+}
+#bmi-result {
+    margin-top: 20px; /* Jarak atas untuk hasil BMI */
+    font-size: 1.2em; /* Ukuran font hasil */
+    display: none ; /* Sembunyikan hasil sampai dihitung */
+
+}
+/* Tambahkan ini ke CSS Anda */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan body mengisi tinggi viewport */
+}
+
+main {
+    flex: 1; /* Membuat main mengambil ruang yang tersisa */
+}
+/* Media Queries */
+@media (max-width: 758px) {
+    .hamburger {
+        display: block; /* Tampilkan hamburger pada tampilan kecil */
+    }
+
+    nav {
+        display: none; /* Sembunyikan navbar pada tampilan kecil */
+        background: #121212; /* Latar belakang navbar */
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi header */
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav.active {
+        display: block; /* Tampilkan navbar saat aktif */
+    }
+
+    nav ul {
+        flex-direction: column; /* Ubah arah menjadi kolom */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Tambahkan margin untuk item menu */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Ukuran font untuk tampilan kecil */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Ukuran font untuk tampilan kecil */
+        
+    }
+    footer {
+        text-align: center;
+        padding: 15px 0;
+        background: #1e1e1e; /* Latar belakang footer gelap */
+        color: #fff;
+        position: block;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
+  

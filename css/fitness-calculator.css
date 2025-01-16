@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Warna latar belakang terang */
+    color: #333; /* Warna teks gelap */
+}
+
+header {
+    background: linear-gradient(90deg, #161616, #b30000); /* Gradien gelap */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+header h1 {
+    font-family:"Anton";
+    font-weight: 400;
+    font-size: 20px;
+    font-style: italic;
+}
+header h1 span{
+    font-family:"Anton";
+    font-weight: 400;
+    font-size: 20px;
+    font-style: italic;
+;}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Warna saat hover */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px; /* Jarak antar section */
+}
+
+h2 {
+    color: #f0f0f0; /* Warna judul untuk kalkulator */
+    margin-bottom: 20px;
+    text-align: center; /* Pusatkan judul */
+}
+
+form {
+    background: #1e1e1e; /* Latar belakang formulir gelap */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    color: #f0f0f0;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444; /* Border lebih gelap */
+    border-radius: 4px;
+    background: #333; /* Latar belakang input gelap */
+    color: #fff; /* Teks input terang */
+    transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: #4a90e2; /* Warna border saat fokus */
+}
+
+button {
+    background: #880000; /* Warna tombol */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5e0000; /* Warna tombol saat hover */
+}
+
+#bmi-result, #calorie-result {
+    margin-top: 20px; /* Jarak atas untuk hasil */
+    font-size: 1.2em; /* Ukuran font hasil */
+    display: none; /* Sembunyikan hasil sampai dihitung */
+}
+
+#bmi-result label, #calorie-result label {
+    font-weight: bold; /* Tebalkan label hasil */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #4a4a4a; /* Latar belakang footer */
+    color: #fff;
+    position: relative; /* Pastikan ini tidak diubah menjadi absolute */
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+html, body {
+    height: 100%; /* Pastikan body memiliki tinggi penuh */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Atur arah flex menjadi kolom */
+}
+
+main {
+    flex: 1; /* Membuat main mengambil ruang yang tersisa */
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Sembunyikan hamburger secara default */
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Navbar Styles */
+nav {
+    display: block; /* Tampilkan navbar secara default */
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+#calculator-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#calculator-tabs button {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#calculator-tabs button.active {
+    background-color: #b30000; /* Warna untuk tab aktif */
+}
+
+#calculator-tabs button:hover {
+    background-color: #860101; /* Warna saat hover */
+}
+
+.calculator-section {
+    display: none; /* Sembunyikan semua calculator section secara default */
+}
+
+.calculator-section.active {
+    display: block; /* Tampilkan hanya section yang aktif */
+}
+@media (max-width: 758px) {
+    .hamburger {
+        display: block; /* Tampilkan hamburger pada tampilan kecil */
+    }
+
+    nav {
+        display: none; /* Sembunyikan navbar pada tampilan kecil */
+        background: #121212; /* Latar belakang navbar */
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi header */
+        width: 100%;
+        z-index: 1000;
+    
+
+    }
+
+    nav.active {
+        display: block; /* Tampilkan navbar saat aktif */
+        
+    }
+
+    nav ul {
+        flex-direction: column; /* Ubah arah menjadi kolom */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Tambahkan margin untuk item menu */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Ukuran font untuk tampilan kecil */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Ukuran font untuk tampilan kecil */
+    }
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
+  

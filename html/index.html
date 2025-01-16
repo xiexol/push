@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSH</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="../icon.png">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: #f0f0f0;"><span style="color: gold;">PUSH</span> THE LIMIT</a></h1>
+        <div class="hamburger" id="hamburger">&#9776;</div> <!-- Simbol hamburger -->   
+    </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Planner</a></li>
+                <li><a href="fitness-calculator.html">Kalkulator Kebugaran</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="testi.html">Testimoni</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="mask-container">
+                <main class="content">
+                    <h1>Rencanakan Latihan Anda <span><a href="#workouts" style="color: gold;text-decoration: none;">sekarang</a></span></h1>
+                    <p>Temukan rencana latihan yang tepat hanya di <a href="#">PUSH</a></p>
+                </main>
+            </div>
+        </section>
+        <section id="workouts">
+            <h2>Rencana Latihan</h2>
+            <form id="workout-form">
+                <label for="goal">Pilih Tujuan Latihan Anda:</label>
+                <select id="goal" required>
+                    <option value="">--Pilih--</option>
+                    <option value="weight_loss">Menurunkan Berat Badan</option>
+                    <option value="muscle_gain">Meningkatkan Otot</option>
+                    <option value="general_fitness">Sekadar Berolahraga</option>
+                </select>
+                <label for="level">Pilih Tingkat Kebugaran Anda:</label>
+                <select id="level" required>
+                    <option value="">--Pilih--</option>
+                    <option value="beginner">Pemula</option>
+                    <option value="intermediate">Menengah</option>
+                    <option value="advanced">Lanjutan</option>
+                </select>
+                <button type="submit">Dapatkan Rencana Latihan</button>
+            </form>
+            <div id="workout-plan"></div>
+            <section id="timer" style="text-align: center; margin-top: 20px;">
+                <h3>Timer Workout</h3>
+                <input type="number" id="set-time" placeholder="Detik" min="1" style="width: 100px;">
+                <button id="set-timer">Set Timer</button>
+                <div id="timer-display">00:00</div>
+                <button id="start-timer" disabled>Mulai</button>
+                <button id="stop-timer" disabled>Berhenti</button>
+                <button id="reset-timer" disabled>Reset</button>
+            </section>
+        </section>
+
+        <section id="progress">
+            <h2>Pelacak Kemajuan</h2>
+            <form id="progress-form">
+                <label for="date">Tanggal:</label>
+                <input type="date" id="date" required>
+                <label for="workout">Latihan yang Dilakukan:</label>
+                <input type="text" id="workout" required>
+                <label for="notes">Catatan:</label>
+                <textarea id="notes"></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <div id="progress-list"></div> <!-- Daftar entri kemajuan -->
+        </section>
+    </main>
+
+    <footer>
+        <p> PUSH. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

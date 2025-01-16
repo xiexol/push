@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Pertanyaan yang Sering Diajukan</title>
+    <link rel="stylesheet" href="../css/faq.css"> <!-- Menggunakan CSS yang sama -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="icon" href="../icon.png">
+
+    <style>
+        .faq-question {
+            cursor: pointer;
+            padding: 15px;
+            background: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 5px;
+            margin: 10px 0;
+            color: #f0f0f0;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #333;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: #333;
+            border-left: 5px solid #b30000;
+            border-radius: 5px;
+            margin: 5px 0 15px 0;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: #f0f0f0;"><span style="color: gold;">PUSH</span> THE LIMIT</a></h1>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Simbol hamburger -->
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Planner</a></li>
+                <li><a href="fitness-calculator.html">Kalkulator Kebugaran</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="testi.html">Testimoni</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq">
+            <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <strong>1. Apa itu kalkulator kebugaran?</strong>
+            </div>
+            <div class="faq-answer">
+                <p>Kalkulator kebugaran adalah alat yang membantu Anda menghitung berbagai metrik kebugaran, seperti BMI dan kebutuhan kalori harian.</p>
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <strong>2. Bagaimana cara menggunakan kalkulator BMI?</strong>
+            </div>
+            <div class="faq-answer">
+                <p>Anda hanya perlu memasukkan berat badan dan tinggi badan Anda, lalu kalkulator akan menghitung BMI Anda secara otomatis.</p>
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <strong>3. Apakah suplemen diperlukan untuk kebugaran?</strong>
+            </div>
+            <div class="faq-answer">
+                <p>Suplemen dapat membantu memenuhi kebutuhan nutrisi, tetapi tidak selalu diperlukan jika Anda sudah mendapatkan nutrisi yang cukup dari makanan.</p>
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <strong>4. Berapa banyak air yang harus saya minum setiap hari?</strong>
+            </div>
+            <div class="faq-answer">
+                <p>Umumnya, disarankan untuk minum sekitar 2 liter air per hari, tetapi kebutuhan dapat bervariasi tergantung pada aktivitas fisik dan kondisi cuaca.</p>
+            </div>
+
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <strong>5. Apa yang harus saya lakukan jika saya merasa sakit saat berolahraga?</strong>
+            </div>
+            <div class="faq-answer">
+                <p>Jika Anda merasa sakit, segera hentikan latihan dan beristirahat. Jika rasa sakit berlanjut, konsultasikan dengan dokter atau ahli kesehatan.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> PUSH. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(questionElement) {
+            const answerElement = questionElement.nextElementSibling;
+            if (answerElement.style.display === "block") {
+                answerElement.style.display = "none";
+            } else {
+                answerElement.style.display = "block";
+            }
+        }
+    </script>
+        <script src="../js/faq.js"></script>
+</body>
+</html>
